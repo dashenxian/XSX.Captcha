@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>XSX.Captcha</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\XSX.Captcha.Domain\XSX.Captcha.Domain.csproj" />
+    <ProjectReference Include="..\XSX.Captcha.Application.Contracts\XSX.Captcha.Application.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
+    <PackageReference Include="Volo.Abp.Account.Application" Version="3.1.2" />
+    <PackageReference Include="Volo.Abp.Identity.Application" Version="3.1.2" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="3.1.2" />
+    <PackageReference Include="Volo.Abp.TenantManagement.Application" Version="3.1.2" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.Application" Version="3.1.2" />
+  </ItemGroup>
+
+</Project>
